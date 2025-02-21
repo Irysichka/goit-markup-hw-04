@@ -84,11 +84,29 @@ img{
     color: #2e2f42;
     padding: 24px 0;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-nav-link:hover,
-.header-nav-link:focus{
+.header-nav-link:focus,
+.header-nav-link.current
+{
     color: #404bbf;
+}
+
+.header-nav-link.current{
+    position: relative;
+}
+
+.header-nav-link.current::after{
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    content: "";
+    background-color: #404bbf;
 }
 
 .header-adr {
@@ -126,6 +144,12 @@ img{
 .hero {
     background-color: #2e2f42;
     padding: 188px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+
 }
 
 .hero-title {
@@ -184,10 +208,22 @@ img{
 .test-list {
     display: flex;
     gap: 24px;
+    
 }
 
 .test-item {
     width: calc((100% - 72px) / 4);
+}
+
+.test-item-container{
+    display: flex;
+    border: 1px solid #8e8f99;
+        border-radius: 4px;
+        width: 264px;
+        height: 112px;
+        background-color: #f4f4fd;
+        margin-bottom: 8px;
+        padding: 24px 100px;
 }
 
 .test-item-title {
@@ -236,16 +272,43 @@ img{
         background-color: #FFFFFF;
         width: calc((100% - 72px) / 4);
         border-radius: 0 0 4px 4px;
+        box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .team-img {}
 
 .team-block-text{
-    margin: 32px 16px;
     text-align: center;
     padding: 32px 0;
 }
+.team-icons{
+    display: flex;
+    gap: 24px;
+    width: 232px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 8px auto;
+}
 
+.team-icons-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    fill: #f4f4fd;
+    width: 100%;
+    height: 100%;
+
+}
+
+.icons-link{
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+}
 .team-img-item {
         font-weight: 500;
         font-size: 20px;
