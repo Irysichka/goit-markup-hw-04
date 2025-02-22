@@ -41,6 +41,9 @@ img{
 .header {
     background-color: #fff;
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);;
 }
 .header-container{
     display: flex;
@@ -121,7 +124,8 @@ img{
 
 }
 
-.header-adr-item {}
+.header-adr-item {
+}
 
 .header-adr-link {
         font-weight: 400;
@@ -131,6 +135,8 @@ img{
         color: #434455;
         display: block;
         padding: 24px 0;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
 }
 
 .header-adr-link:hover,
@@ -148,6 +154,7 @@ img{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    max-width: 1440px;
     
 
 }
@@ -178,7 +185,8 @@ img{
         margin-top: 48px;
         padding: 16px 32px;
         min-width: 169px;
-        height: 56px
+        height: 56px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -265,6 +273,8 @@ img{
     display: flex;
     align-items: center;
     gap: 24px;
+    align-items: center;
+    justify-content: center;
     
 }
 
@@ -300,14 +310,18 @@ img{
     fill: #f4f4fd;
     width: 100%;
     height: 100%;
-
+background-color: #4D5AE5;
+    border-radius: 50%;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
+.team-icons-link:hover
+.team-icons-link:focus{
+background-color: #404bbf;
+}
 .icons-link{
     width: 40px;
     height: 40px;
-    background-color: #4D5AE5;
-    border-radius: 50%;
 }
 .team-img-item {
         font-weight: 500;
@@ -362,6 +376,9 @@ img{
 .portfolio-list-item:hover .overlay
 {
 transform: translateY(0);
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-list-item {
@@ -443,5 +460,17 @@ border-bottom: 1px solid #e7e9fc;
      margin: 0;
 
 }
+.footer-text-media{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #fff;
+        margin-bottom: 16px;
+}
 
+.footer-media{
+    display: flex;
+flex-direction: column;
+}
 /* #endregion Footer*/
